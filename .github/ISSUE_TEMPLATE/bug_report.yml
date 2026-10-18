@@ -1,0 +1,97 @@
+name: « Bug »
+description: Signaler un comportement incorrect ou une transaction qui ne s’est pas déroulée comme prévu.
+title: "[Bug] "
+labels:
+  - bug
+  - needs-triage
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Merci de ne pas inclure de mot de passe, code OTP, clé API, numéro complet de téléphone, pièce d’identité ou données bancaires.
+        Pour une vulnérabilité de sécurité, utilisez le lien de signalement privé indiqué dans la page de création d’issue.
+
+  - type: input
+    id: summary
+    attributes:
+      label: Résumé
+      description: Décrivez le problème en une phrase.
+      placeholder: Le bonus quotidien n’est pas crédité après la validation.
+    validations:
+      required: true
+
+  - type: dropdown
+    id: area
+    attributes:
+      label: Domaine concerné
+      options:
+        - Compte et authentification
+        - Bonus quotidien
+        - Invitations et parrainage
+        - Solde et portefeuille FCFA
+        - Retrait ou paiement
+        - Notifications
+        - Interface web ou mobile
+        - Autre
+    validations:
+      required: true
+
+  - type: input
+    id: amount
+    attributes:
+      label: Montant concerné, le cas échéant
+      description: Indiquez uniquement le montant et la devise, jamais un identifiant de transaction ou une donnée financière sensible.
+      placeholder: 1 000 FCFA
+
+  - type: textarea
+    id: steps
+    attributes:
+      label: Étapes pour reproduire
+      description: Listez les étapes précises permettant de reproduire le problème.
+      placeholder: |
+        1. Ouvrir…
+        2. Sélectionner…
+        3. Valider…
+    validations:
+      required: true
+
+  - type: textarea
+    id: expected
+    attributes:
+      label: Comportement attendu
+      description: Qu’aurait dû faire l’application ?
+    validations:
+      required: true
+
+  - type: textarea
+    id: actual
+    attributes:
+      label: Comportement observé
+      description: Que s’est-il réellement passé ? Ajoutez le message d’erreur exact si disponible.
+    validations:
+      required: true
+
+  - type: input
+    id: environment
+    attributes:
+      label: Environnement
+      description: Version de l’application, appareil, système et navigateur.
+      placeholder: Android 14, application 1.2.0
+    validations:
+      required: true
+
+  - type: textarea
+    id: evidence
+    attributes:
+      label: Preuves non sensibles
+      description: Ajoutez une capture d’écran expurgée ou des journaux ne contenant aucun secret ni donnée personnelle.
+
+  - type: checkboxes
+    id: checklist
+    attributes:
+      label: Vérifications
+      options:
+        - label: J’ai recherché les issues existantes et ce problème n’est pas déjà signalé.
+          required: true
+        - label: J’ai supprimé les secrets et données personnelles de ce signalement.
+          required: true

@@ -1,0 +1,89 @@
+name: « Fonctionnalité »
+description: Proposer une amélioration utile aux membres, aux filleuls ou à l’équipe d’administration.
+title: "[Feature] "
+labels:
+  - enhancement
+  - needs-triage
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Décrivez la valeur attendue pour les utilisateurs de la plateforme.
+        Ne publiez aucune information personnelle, donnée bancaire, clé API ou détail de sécurité exploitable.
+
+  - type: textarea
+    id: problem
+    attributes:
+      label: Problème ou besoin
+      description: Quel problème cette fonctionnalité résout-elle et pour quels utilisateurs ?
+      placeholder: Les membres ne savent pas clairement quand un retrait en FCFA sera traité.
+    validations:
+      required: true
+
+  - type: textarea
+    id: proposal
+    attributes:
+      label: Solution proposée
+      description: Décrivez le fonctionnement souhaité, y compris les règles métier importantes.
+      placeholder: |
+        - L’utilisateur voit…
+        - Le système vérifie…
+        - Le solde est mis à jour…
+    validations:
+      required: true
+
+  - type: dropdown
+    id: area
+    attributes:
+      label: Domaine
+      options:
+        - Expérience utilisateur
+        - Bonus quotidien
+        - Invitations et parrainage
+        - Solde et portefeuille FCFA
+        - Retraits et paiements
+        - Notifications
+        - Administration et modération
+        - Statistiques et rapports
+        - Autre
+    validations:
+      required: true
+
+  - type: dropdown
+    id: priority
+    attributes:
+      label: Impact souhaité
+      options:
+        - Bloquant pour une activité essentielle
+        - Important pour beaucoup d’utilisateurs
+        - Amélioration utile
+        - Idée exploratoire
+    validations:
+      required: true
+
+  - type: textarea
+    id: acceptance
+    attributes:
+      label: Critères d’acceptation
+      description: Comment vérifier que la fonctionnalité est terminée ?
+      placeholder: |
+        - [ ] …
+        - [ ] …
+    validations:
+      required: true
+
+  - type: textarea
+    id: alternatives
+    attributes:
+      label: Solutions alternatives
+      description: Quelles solutions ou contournements avez-vous envisagés ?
+
+  - type: checkboxes
+    id: checklist
+    attributes:
+      label: Vérifications
+      options:
+        - label: J’ai recherché les demandes similaires avant de créer cette proposition.
+          required: true
+        - label: Cette demande ne nécessite pas de publier de données personnelles ou financières sensibles.
+          required: true
